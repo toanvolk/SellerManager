@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Application\Services\" />
+    <Folder Include="Contracts\Services\" />
+    <Folder Include="Dto\EntitiesDto\" />
+    <Folder Include="Dto\Map\" />
+  </ItemGroup>
+
+</Project>
