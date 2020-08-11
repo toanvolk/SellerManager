@@ -9,15 +9,15 @@ using System.IO;
 namespace SellerManager.Data.EF
 {
     public class DbSellerManagerContext: DbContext
-    {
-        DbSet<Product> products { get; set; }
-        DbSet<Customer> customers { get; set; }
-        DbSet<PriceList> priceLists { get; set; }
-        DbSet<PriceListDetail> priceListDetails { get; set; }
+    {        
         public DbSellerManagerContext(DbContextOptions<DbSellerManagerContext> options)
             : base(options)
         {
         }
+        DbSet<Product> products { get; set; }
+        DbSet<Customer> customers { get; set; }
+        DbSet<PriceList> priceLists { get; set; }
+        DbSet<PriceListDetail> priceListDetails { get; set; }
 
     }
     public class DbSellerManagerContextFactory : IDesignTimeDbContextFactory<DbSellerManagerContext>
