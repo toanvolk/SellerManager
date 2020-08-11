@@ -1,13 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace SellerManager.Data.Entities
 {
     public class Customer : BasicEntity
     {
-        public int Id { get; set; }
+        [Key]
+        [StringLength(50)]
+        public string CustomerId { get; set; }
+        
+        [StringLength(250)]
+        [Required]
         public string Name { get; set; }
+
+        [StringLength(500)]
         public string Address { get; set; }
         public string Description { get; set; }
     }
