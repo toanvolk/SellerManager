@@ -3,12 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SellerManager.Data.Migrations
 {
-    public partial class Initial : Migration
+    public partial class initdatabase : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "customers",
+                name: "Customer",
                 columns: table => new
                 {
                     CustomerId = table.Column<string>(maxLength: 50, nullable: false),
@@ -23,11 +23,31 @@ namespace SellerManager.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_customers", x => x.CustomerId);
+                    table.PrimaryKey("PK_Customer", x => x.CustomerId);
                 });
 
             migrationBuilder.CreateTable(
-                name: "priceListDetails",
+                name: "PriceList",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(nullable: false),
+                    IsNotUse = table.Column<bool>(nullable: false),
+                    CreateDate = table.Column<DateTime>(nullable: false),
+                    CreateBy = table.Column<string>(maxLength: 50, nullable: true),
+                    ModifyDate = table.Column<DateTime>(nullable: false),
+                    ModifyBy = table.Column<string>(maxLength: 50, nullable: true),
+                    Name = table.Column<string>(maxLength: 250, nullable: false),
+                    TimeApply = table.Column<DateTime>(nullable: false),
+                    Description = table.Column<string>(nullable: true),
+                    CustomerId = table.Column<string>(maxLength: 50, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PriceList", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "PriceListDetail",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
@@ -44,31 +64,11 @@ namespace SellerManager.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_priceListDetails", x => x.Id);
+                    table.PrimaryKey("PK_PriceListDetail", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "priceLists",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(nullable: false),
-                    IsNotUse = table.Column<bool>(nullable: false),
-                    CreateDate = table.Column<DateTime>(nullable: false),
-                    CreateBy = table.Column<string>(maxLength: 50, nullable: true),
-                    ModifyDate = table.Column<DateTime>(nullable: false),
-                    ModifyBy = table.Column<string>(maxLength: 50, nullable: true),
-                    Name = table.Column<string>(maxLength: 250, nullable: false),
-                    TimeApply = table.Column<DateTime>(nullable: false),
-                    Description = table.Column<string>(nullable: true),
-                    CustomerId = table.Column<string>(maxLength: 50, nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_priceLists", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "products",
+                name: "Product",
                 columns: table => new
                 {
                     ProductId = table.Column<string>(maxLength: 50, nullable: false),
@@ -83,23 +83,23 @@ namespace SellerManager.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_products", x => x.ProductId);
+                    table.PrimaryKey("PK_Product", x => x.ProductId);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "customers");
+                name: "Customer");
 
             migrationBuilder.DropTable(
-                name: "priceListDetails");
+                name: "PriceList");
 
             migrationBuilder.DropTable(
-                name: "priceLists");
+                name: "PriceListDetail");
 
             migrationBuilder.DropTable(
-                name: "products");
+                name: "Product");
         }
     }
 }

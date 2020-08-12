@@ -6,6 +6,7 @@ using System.Text;
 
 namespace SellerManager.Data.Entities
 {
+    [Table("Product")]
     public class Product : BasicEntity
     {
         [Key]
