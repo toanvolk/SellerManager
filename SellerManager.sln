@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellerManager.Data", "SellerManager.Data\SellerManager.Data.csproj", "{BDA1958E-2AF0-4E7F-AB98-8469D26AFDAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SellerManager.Data", "SellerManager.Data\SellerManager.Data.csproj", "{BDA1958E-2AF0-4E7F-AB98-8469D26AFDAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellerManager.App", "SellerManager.App\SellerManager.App.csproj", "{D8C43AC5-972D-4700-9B63-B66870829350}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SellerManager.App", "SellerManager.App\SellerManager.App.csproj", "{D8C43AC5-972D-4700-9B63-B66870829350}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellerManager.Api", "SellerManager.Api\SellerManager.Api.csproj", "{B980002E-D6A0-4E23-9B1B-F8D9BC455DC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SellerManager.Api", "SellerManager.Api\SellerManager.Api.csproj", "{B980002E-D6A0-4E23-9B1B-F8D9BC455DC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellerManager.IdentityServer4", "SellerManager.IdentityServer4\SellerManager.IdentityServer4.csproj", "{716893D3-304A-45A8-AC8B-AA146F583477}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{B980002E-D6A0-4E23-9B1B-F8D9BC455DC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B980002E-D6A0-4E23-9B1B-F8D9BC455DC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B980002E-D6A0-4E23-9B1B-F8D9BC455DC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{716893D3-304A-45A8-AC8B-AA146F583477}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{716893D3-304A-45A8-AC8B-AA146F583477}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{716893D3-304A-45A8-AC8B-AA146F583477}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{716893D3-304A-45A8-AC8B-AA146F583477}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
