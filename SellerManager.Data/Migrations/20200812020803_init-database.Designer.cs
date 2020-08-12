@@ -10,8 +10,8 @@ using SellerManager.Data.EF;
 namespace SellerManager.Data.Migrations
 {
     [DbContext(typeof(DbSellerManagerContext))]
-    [Migration("20200811084949_Initial")]
-    partial class Initial
+    [Migration("20200812020803_init-database")]
+    partial class initdatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -58,7 +58,7 @@ namespace SellerManager.Data.Migrations
 
                     b.HasKey("CustomerId");
 
-                    b.ToTable("customers");
+                    b.ToTable("Customer");
                 });
 
             modelBuilder.Entity("SellerManager.Data.Entities.PriceList", b =>
@@ -101,7 +101,7 @@ namespace SellerManager.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("priceLists");
+                    b.ToTable("PriceList");
                 });
 
             modelBuilder.Entity("SellerManager.Data.Entities.PriceListDetail", b =>
@@ -146,7 +146,7 @@ namespace SellerManager.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("priceListDetails");
+                    b.ToTable("PriceListDetail");
                 });
 
             modelBuilder.Entity("SellerManager.Data.Entities.Product", b =>
@@ -186,7 +186,7 @@ namespace SellerManager.Data.Migrations
 
                     b.HasKey("ProductId");
 
-                    b.ToTable("products");
+                    b.ToTable("Product");
                 });
 #pragma warning restore 612, 618
         }

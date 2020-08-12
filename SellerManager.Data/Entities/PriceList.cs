@@ -6,6 +6,7 @@ using System.Text;
 
 namespace SellerManager.Data.Entities
 {
+    [Table("PriceList")]
     public class PriceList : BasicEntity
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
